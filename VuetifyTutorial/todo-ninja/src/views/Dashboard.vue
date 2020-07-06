@@ -1,12 +1,16 @@
 <template>
   <div class="dashboard">
-    <h1>Dashboard</h1>
-</div>
+    <v-subheader class=" grey--text">Dashboard</v-subheader>
+
+    <v-container class="my-5">
+      content
+      </v-container>
+
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-export default {
-}
+export default {};
 </script>
