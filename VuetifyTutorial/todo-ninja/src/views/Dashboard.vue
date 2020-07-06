@@ -4,14 +4,25 @@
 
     <v-container class="my-5">
       <v-layout row class="mb-3">
-        <v-btn small flat color="grey" @click="sortBy('title')">
-          <v-icon left sall>folder</v-icon>
-          <span class="caption text-lowecase">By project name</span>
-        </v-btn>
-        <v-btn small flat color="grey" @click="sortBy('person')">
-          <v-icon left sall>person</v-icon>
-          <span class="caption text-lowecase">By person</span>
-        </v-btn>
+        <v-tooltip top>
+          <template v-slot:activator="{ on }">
+            <v-btn small flat color="grey" @click="sortBy('title')" v-on="on">
+              <v-icon left small>folder</v-icon>
+              <span right class="caption text-lowercase">by project name</span>
+            </v-btn>
+          </template>
+          <span>Sorts projects by name</span>
+        </v-tooltip>
+
+        <v-tooltip top>
+          <template v-slot:activator="{ on }">
+            <v-btn small flat color="grey" @click="sortBy('person')" v-on="on">
+              <v-icon left small>person</v-icon>
+              <span right class="caption text-lowercase">by person</span>
+            </v-btn>
+          </template>
+          <span>Sorts projects by person</span>
+        </v-tooltip>
       </v-layout>
       <v-card flat tile class="px-3" v-for="project in projects" :key="project.title">
         <v-row row wrap>
@@ -84,11 +95,11 @@ export default {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
         }
       ]
-    }
+    };
   },
-  methods:{
-    sortBy(prop){
-      this.projects.sort((a,b) => a[prop] < b[prop] ? -1:1)
+  methods: {
+    sortBy(prop) {
+      this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
     }
   }
 };
@@ -104,13 +115,13 @@ export default {
 .project.overdue {
   border-left: 4px solid tomato;
 }
-.v-chip.complete{
-  background:#3cd1c2!important;
+.v-chip.complete {
+  background: #3cd1c2 !important;
 }
-.v-chip.ongoing{
-  background:#ffaa2c!important;
+.v-chip.ongoing {
+  background: #ffaa2c !important;
 }
-.v-chip.overdue{
-  background:#f83e70!important;
+.v-chip.overdue {
+  background: #f83e70 !important;
 }
 </style>
