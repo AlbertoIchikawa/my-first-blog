@@ -1,8 +1,7 @@
 <template>
   <div class="dashboard">
-    <v-subheader class="grey--text">Dashboard</v-subheader>
-
-    <v-container class="my-5">
+    <v-subheader class="grey--text">Dashboard</v-subheader>	    
+     <v-container class="my-5">
       <v-layout row class="mb-3">
         <v-tooltip top>
           <template v-slot:activator="{ on }">
@@ -30,15 +29,15 @@
             <div class="caption grey--text">Project Title</div>
             <div>{{project.title}}</div>
           </v-col>
-          <v-col xs="2">
+          <v-col xs="6" sm4 md2>
             <div class="caption grey--text">Person</div>
             <div>{{project.person}}</div>
           </v-col>
-          <v-col xs="2">
+          <v-col xs="6" sm4 md2>
             <div class="caption grey--text">Due Date</div>
             <div>{{project.due}}</div>
           </v-col>
-          <v-col xs="2">
+          <v-col xs="6" sm4 md2>
             <div class="right">
               <v-chip
                 small
@@ -53,7 +52,7 @@
       </v-card>
     </v-container>
   </div>
-</template>
+</template>	
 
 <script>
 // @ is an alias to /src
