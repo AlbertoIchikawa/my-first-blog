@@ -29,15 +29,15 @@
             <div class="caption grey--text">Project Title</div>
             <div>{{project.title}}</div>
           </v-col>
-          <v-col xs="6" sm4 md2>
+          <v-col xs="6" sm="4" md="2">
             <div class="caption grey--text">Person</div>
             <div>{{project.person}}</div>
           </v-col>
-          <v-col xs="6" sm4 md2>
+          <v-col xs="6" sm="4" md="2">
             <div class="caption grey--text">Due Date</div>
             <div>{{project.due}}</div>
           </v-col>
-          <v-col xs="6" sm4 md2>
+          <v-col xs="6" sm="4" md="2">
             <div class="right">
               <v-chip
                 small
