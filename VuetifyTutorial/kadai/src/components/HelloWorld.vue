@@ -2,7 +2,9 @@
   <v-card class="mx-auto" max-width="450">
     <!-- src：画像を読み込んでいる。 -->
     <!-- aspect-ratioで比率を調整 -->
+    <v-avatar>
     <v-img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" :aspect-ratio="16/9"></v-img>
+    </v-avatar>
     <v-card-title>
       <div class="display-1 mb-2">Welcome Home...</div>
       <div class="title font-weight-regular grey--text">Monday, 12:30 PM, Mostly Sunny</div>
