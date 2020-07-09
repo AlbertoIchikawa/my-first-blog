@@ -7,10 +7,10 @@ import Media from '../pages/Media.vue';
 import Snackbar from '../pages/Snackbar.vue';
 import Chart from '../pages/Chart.vue';
 import Mailbox from '../pages/Mailbox.vue';
+import ContactUs from '../pages/ContactUs.vue';
 import Calendar from '../pages/Calendar.vue';
 import Login from '../pages/core/Login.vue';
 import Error from '../pages/core/Error.vue';
-
 
 
 Vue.use(Router);
@@ -35,6 +35,17 @@ export default new Router({
         breadcrumb: [
           { name: 'Dashboard', href: 'Dashboard' },
           { name: 'Mailbox' }
+        ]
+      }
+    },
+    {
+      path: '/contactus',
+      name: 'ContactUs',
+      component: ContactUs,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'ContactUs' }
         ]
       }
     },
@@ -93,6 +104,8 @@ export default new Router({
         ]
       }
     },
+
+
     {
       path: '/login',
       name: 'Login',

@@ -4,12 +4,13 @@
     fixed app>
     <v-toolbar flat dark :color="$root.themeColor" class="toolbar">
       <router-link :to="{ name: 'Dashboard' }">
-        <img src="static/logo.png" width="36px"></img>
+        <img src="static/logo.png" width="36px">
       </router-link>
       <router-link :to="{ name: 'Dashboard' }" class="text">
          Vue Admin Template
       </router-link>
     </v-toolbar>
+
     <v-list>
       <v-list-tile @click="changeRoute('Dashboard', 1)">
         <v-list-tile-action>
@@ -55,7 +56,7 @@
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 6}, 'item-title' ]">Media</v-list-tile-title>
         </v-list-tile>
-    </v-list-group>
+      </v-list-group>
 
       <v-list-group
         prepend-icon="select_all">
@@ -68,7 +69,7 @@
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 7}, 'item-title' ]">Snackbar</v-list-tile-title>
         </v-list-tile>
-    </v-list-group>
+      </v-list-group>
 
       <v-list-group
         prepend-icon="fingerprint">
@@ -103,7 +104,7 @@
           </v-list-tile-action>
           <v-list-tile-title class="item-title">Login</v-list-tile-title>
         </v-list-tile>
-    </v-list-group>
+      </v-list-group>
 
       <v-list-group
       prepend-icon="account_circle">
@@ -113,13 +114,21 @@
           <v-list-tile
             v-for="(admin, i) in admins"
             :key="i"
-            @click="">
+            >
             <v-list-tile-action>
               <v-icon v-text="admin[1]"></v-icon>
             </v-list-tile-action>
             <v-list-tile-title v-text="admin[0]"></v-list-tile-title>
           </v-list-tile>
     </v-list-group>
+    
+    
+      <v-list-tile  @click="changeRoute('ContactUs', 8)">
+        <v-list-tile-action>
+          <v-icon>mail</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title :class="[{'active': selectedIndex === 8}, 'item-title' ]">Contact Us</v-list-tile-title>
+      </v-list-tile>
     </v-list>
   </v-navigation-drawer>
 </template>
