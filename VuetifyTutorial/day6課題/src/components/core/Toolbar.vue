@@ -161,7 +161,7 @@
         </v-toolbar>
         <v-card-text class="pa-0">
           <v-list two-line class="pa-0">
-          <template v-for="(item, index) in notifications">
+          <!-- <template v-for="(item, index) in notifications">
             <v-divider :key="index" />
             <v-list-tile avatar :key="item.title" @click.parent="item.onClick">
             <v-list-tile-avatar :color="item.color">
@@ -174,7 +174,7 @@
               {{item.actionAt}}
             </v-list-tile-action>
             </v-list-tile>
-          </template>
+          </template> -->
           </v-list>
           <v-divider></v-divider>
           <v-btn block flat v-if="false">See all notifications</v-btn>
