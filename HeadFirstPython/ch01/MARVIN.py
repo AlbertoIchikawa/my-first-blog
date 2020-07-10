@@ -8,3 +8,5 @@ for char in letters[-7:]:
 print()
 for char in letters[12:20]:
     print('\t'*3, char)
+
+    
