@@ -29,7 +29,7 @@ for i in range(n):
     # Print probability distribution for row i.
     for j in range(n):
         # Print probability for column j.
-        p = (.80 * linkCounts[i][j] / outDegrees[i]) + (.20 / n)
+        p = (.95 * linkCounts[i][j] / outDegrees[i]) + (.5 / n)
         stdio.writef('%8.5f', p)
     stdio.writeln()
 
