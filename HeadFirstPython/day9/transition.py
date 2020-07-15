@@ -12,9 +12,12 @@ import stdarray
 # have no outlinks in the input.
 
 n = stdio.readInt()
+print("n:", n)
 
 linkCounts = stdarray.create2D(n, n, 0)
 outDegrees = stdarray.create1D(n, 0)
+print(linkCounts)
+print(outDegrees)
 
 while not stdio.isEmpty():
     # Accumulate link counts.
@@ -22,9 +25,13 @@ while not stdio.isEmpty():
     j = stdio.readInt()
     outDegrees[i] += 1
     linkCounts[i][j] += 1
+    print((i, j))
+    # print(linkCounts)
+    # print(outDegrees)
 
 stdio.writeln(str(n) + ' ' + str(n))
-
+# link_probability
+# leap_probability
 for i in range(n):
     # Print probability distribution for row i.
     for j in range(n):
