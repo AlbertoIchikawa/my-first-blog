@@ -2,6 +2,7 @@
 # transition.py
 # -----------------------------------------------------------------------
 
+
 import stdio
 import stdarray
 
@@ -15,8 +16,6 @@ n = stdio.readInt()
 
 linkCounts = stdarray.create2D(n, n, 0)
 outDegrees = stdarray.create1D(n, 0)
-print(linkCounts)
-print(outDegrees)
 
 while not stdio.isEmpty():
     # Accumulate link counts.
@@ -25,14 +24,9 @@ while not stdio.isEmpty():
     if linkCounts[i][j] == 0:
         outDegrees[i] += 1
         linkCounts[i][j] += 1
-        
+
     # 外部リンクがない設定だが値が０のままだとランダムにページ遷移ができなくなるので1/nの値を新しいページに与える。
 
-    # if linkCounts[i][j] >= 1:
-    #     linkCounts[i][j] = 1
-print(linkCounts)
-print(outDegrees)
-print(linkCounts[5])
 stdio.writeln(str(n) + ' ' + str(n))
 
 for i in range(n):
