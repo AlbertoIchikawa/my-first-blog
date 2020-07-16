@@ -1,6 +1,8 @@
+
 # -----------------------------------------------------------------------
 # transition.py
 # -----------------------------------------------------------------------
+
 
 import stdio
 import stdarray
@@ -16,12 +18,14 @@ n = stdio.readInt()
 linkCounts = stdarray.create2D(n, n, 0)
 outDegrees = stdarray.create1D(n, 0)
 
+
 while not stdio.isEmpty():
     # Accumulate link counts.
     i = stdio.readInt()
     j = stdio.readInt()
     outDegrees[i] += 1
     linkCounts[i][j] += 1
+
 
 stdio.writeln(str(n) + ' ' + str(n))
 
@@ -33,7 +37,6 @@ for i in range(n):
         stdio.writef('%8.5f', p)
     stdio.writeln()
 
-# -----------------------------------------------------------------------
 
 # python transition.py < tiny.txt
 # 5 5
@@ -43,5 +46,7 @@ for i in range(n):
 #  0.92000 0.02000 0.02000 0.02000 0.02000
 #  0.47000 0.02000 0.47000 0.02000 0.02000
 
+
 # python transition.py < medium.txt
 # (Output omitted.)
+
