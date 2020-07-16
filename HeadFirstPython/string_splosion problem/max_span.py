@@ -1,17 +1,18 @@
 def max_span(data_list):
-    index_dict = {}
-    for i, number in enumerate(data_list):
-        if number not in index_dict:
-            index_dict[number] = []
-        index_dict[number].append(i)
-    m = 1
-    for elem in index_dict:
-        current_span = index_dict[elem][-1] - index_dict[elem][0] + 1
-        if current_span > m:
-            m = current_span
-    if len(index_dict) == 0:
-        m = 0
-    return m
+
+    # index_dict = {}
+    # for i, number in enumerate(data_list):
+    #     if number not in index_dict:
+    #         index_dict[number] = []
+    #     index_dict[number].append(i)
+    # m = 1
+    # for elem in index_dict:
+    #     current_span = index_dict[elem][-1] - index_dict[elem][0] + 1
+    #     if current_span > m:
+    #         m = current_span
+    # if len(index_dict) == 0:
+    #     m = 0
+    # return m
 
 
 def max_span_test():
