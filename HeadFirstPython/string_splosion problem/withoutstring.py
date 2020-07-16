@@ -1,9 +1,9 @@
-def withoutString(base, remove):
-    idx = base.lower().find(remove.lower())
-    if idx >= 0:
-        return (base[:idx] if base[:idx] != ' ' else '') + withoutString(base[idx + len(remove):len(base)], remove)
-    else:
-        return base
+import re
+def withoutString(base, delete):
+    idx = re.sub(f'(?i){delete}', '', base)
+    print(idx)
+    return idx
+
 
 
 def withoutString_test():
@@ -11,9 +11,9 @@ def withoutString_test():
     assert withoutString("Hello there", "llo") == "He there", "FT1"
     assert withoutString("Hello there", "e") == "Hllo thr"
     assert withoutString("Hello there", "x") == "Hello there"
-    assert withoutString("This is a FISH", "IS") == "Th a FH"
-    assert withoutString("THIS is a FISH", "is") == "TH a FH"
-    assert withoutString("THIS is a FISH", "iS") == "TH a FH"
+    assert withoutString("This is a FISH", "IS") == "Th  a FH"
+    assert withoutString("THIS is a FISH", "is") == "TH  a FH"
+    assert withoutString("THIS is a FISH", "iS") == "TH  a FH"
     assert withoutString("abxxxxab", "xx") == "abab"
     assert withoutString("abxxxab", "xx") == "abxab"
     assert withoutString("abxxxab", "x") == "abab"
