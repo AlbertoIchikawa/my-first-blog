@@ -1,10 +1,10 @@
 def string_splosion(str):
-    s = '';
+    s = ''
     for x in range(len(str)):
         for y in range(x):
-            s= s +str[y];
-        s = s + str[x];
-    return s;
+            s = s + str[y]
+        s = s + str[x]
+    return s
 
 
 def string_splosion_test():
