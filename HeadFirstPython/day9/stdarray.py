@@ -12,7 +12,6 @@ print("import")
 #=======================================================================
 
 def create1D(length, value=None):
-    print("create1D")
     """
     Create and return a 1D array containing length elements, each
     initialized to value.
@@ -22,7 +21,6 @@ def create1D(length, value=None):
 #-----------------------------------------------------------------------
 
 def create2D(rowCount, colCount, value=None):
-    print("create2D")
     """
     Create and return a 2D array having rowCount rows and colCount
     columns, with each element initialized to value.
@@ -37,7 +35,6 @@ def create2D(rowCount, colCount, value=None):
 #=======================================================================
 
 def write1D(a):
-    print("write1D")
     """
     Write array a to sys.stdout.  First write its length. bool objects
     are written as 0 and 1, not False and True.

@@ -36,7 +36,6 @@ print("stdio import- end")
 #=======================================================================
 
 def writeln(x=''):
-    print("writeln")
     """
     Write x and an end-of-line mark to standard output.
     """
