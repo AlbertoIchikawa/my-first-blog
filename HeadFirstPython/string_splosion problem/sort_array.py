@@ -1,9 +1,9 @@
-def sort_array(nums):
-    idx = []
-    for i in range(nums):
-        if i not in idx:
-            idx = i
-    return idx
+def sort_array(idx):
+    found = []
+    for number in idx:
+        if number not in found:
+            found.append(number)
+    return sorted(found)
 
 
 def sort_array_test():
