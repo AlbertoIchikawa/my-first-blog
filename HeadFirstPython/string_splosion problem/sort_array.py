@@ -1,8 +1,7 @@
 def sort_array(idx):
     found = []
-    for number in idx:
-        if number not in found:
-            found.append(number)
+    found = sorted(set(idx))
+
     return sorted(found)
 
 
