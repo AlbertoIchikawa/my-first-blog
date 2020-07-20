@@ -1,8 +1,5 @@
 def sort_array(idx):
-    found = []
-    found = sorted(set(idx))
-
-    return sorted(found)
+    return sorted(set(idx))
 
 
 def sort_array_test():
