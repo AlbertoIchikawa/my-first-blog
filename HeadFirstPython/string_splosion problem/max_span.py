@@ -1,7 +1,5 @@
 def max_span(data_list):
-    result = []
-    num_list = []
-    span_list = [0]
+    max_value = 0
     # 配列の中の番号種類の取得
     num_list = set(data_list)
 
@@ -9,9 +7,10 @@ def max_span(data_list):
     # それぞれの数字のインデックス値を使ってspanの計算（最後のインデックス値から最初のインデックス値を引いて＋１するとspanがわかる。）
     for num in num_list:
         result = [i for i, e in enumerate(data_list) if e == num]
-        span_list.append(result[-1] - result[0] + 1)
+        if result[-1] - result[0] + 1 > max_value:
+            max_value = result[-1] - result[0] + 1
 
-    return max(span_list)
+    return max_value
 
 
 def max_span_test():
