@@ -19,22 +19,24 @@ Usually it's better to use one set exclusively.
     
 import sys
 import re
-
+print("sys")
+print("re")
 #-----------------------------------------------------------------------
 
 # Change sys.stdin so it provides universal newline support. 
-
+print("stdio import")
 if (sys.hexversion < 0x03000000):
     import os
     sys.stdin = os.fdopen(sys.stdin.fileno(), 'rU', 0)
 else:    
     sys.stdin = open(sys.stdin.fileno(), 'r', newline=None)
-            
+print("stdio import- end")
 #=======================================================================
 # Writing functions
 #=======================================================================
 
 def writeln(x=''):
+    print("writeln")
     """
     Write x and an end-of-line mark to standard output.
     """
@@ -122,6 +124,7 @@ def isEmpty():
 #-----------------------------------------------------------------------
 
 def readInt():
+    # print("readInt")
     """
     Discard leading white space characters from standard input. Then
     read from standard input a sequence of characters comprising an
@@ -140,6 +143,7 @@ def readInt():
     if (strLength >= 2) and (s[0:2] == '0X'): radix = 16
     if (strLength >= 3) and (s[0:3] == '-0x'): radix = 16
     if (strLength >= 3) and (s[0:3] == '-0X'): radix = 16
+    # print(radix)
     return int(s, radix)
 
 #-----------------------------------------------------------------------
@@ -296,6 +300,7 @@ def readAllLines():
 #-----------------------------------------------------------------------
 
 def readAll():
+    print("readAll")
     """
     Read and return as a string all remaining lines of standard input.
     """
