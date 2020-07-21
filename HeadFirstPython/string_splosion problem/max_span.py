@@ -1,17 +1,16 @@
 def max_span(data_list):
-    index_dict = {}
-    for i, number in enumerate(data_list):
-        if number not in index_dict:
-            index_dict[number] = []
-        index_dict[number].append(i)
-    m = 1
-    for elem in index_dict:
-        current_span = index_dict[elem][-1] - index_dict[elem][0] + 1
-        if current_span > m:
-            m = current_span
-    if len(index_dict) == 0:
-        m = 0
-    return m
+    max_value = 0
+    # 配列の中の番号種類の取得
+    num_list = set(data_list)
+
+    # 次にそれぞれの番号のインデックス値を取得してresultに入れる。
+    # それぞれの数字のインデックス値を使ってspanの計算（最後のインデックス値から最初のインデックス値を引いて＋１するとspanがわかる。）
+    for num in num_list:
+        result = [i for i, e in enumerate(data_list) if e == num]
+        if result[-1] - result[0] + 1 > max_value:
+            max_value = result[-1] - result[0] + 1
+
+    return max_value
 
 
 def max_span_test():
