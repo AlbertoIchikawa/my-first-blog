@@ -1,13 +1,10 @@
+import re
+
+
 def sum_numbers(my_string):
-    nums = []
-    substr = ''
-    for elem in my_string:
-        if elem.isdigit():
-            substr += elem
-        else:
-            nums.append(int(substr)) if substr else 0
-            substr = ''
-    return sum(nums + ([int(substr)] if substr else [0]))
+    number = re.findall(r'\d+', my_string)
+
+    return sum(int(num) for num in number)
 
 
 def sum_numbers_test():
@@ -22,5 +19,6 @@ def sum_numbers_test():
     assert sum_numbers("") == 0
     assert sum_numbers("a22bbb3") == 25
     print("num_string_test: done")
+
 
 sum_numbers_test()

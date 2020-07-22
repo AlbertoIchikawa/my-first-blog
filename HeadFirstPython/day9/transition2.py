@@ -21,33 +21,18 @@ while not stdio.isEmpty():
     # Accumulate link counts.
     i = stdio.readInt()
     j = stdio.readInt()
-
-    # if linkCounts[i][j] == 0:
-    outDegrees[i] += 1
-    linkCounts[i][j] += 1
-
-if 0 in outDegrees:
-    outDegrees[5] += (1 / n)
-    # 外部リンクがない設定だが値が０のままだとランダムにページ遷移ができなくなるので1/nの値を新しいページに与える。
-
-    # if linkCounts[i][j] >= 1:
-    #     linkCounts[i][j] = 1
-print(linkCounts)
-
+    if linkCounts[i][j] == 0:
+        outDegrees[i] += 1
+        linkCounts[i][j] += 1
 
 stdio.writeln(str(n) + ' ' + str(n))
 
 for i in range(n):
-    # Print probability distribution for row i.
     for j in range(n):
-        # Print probability for column j.
         p = (.90 * linkCounts[i][j] / outDegrees[i]) + (.10 / n)
-
         stdio.writef('%8.5f', p)
     stdio.writeln()
-
 print(outDegrees)
-
 # -----------------------------------------------------------------------
 
 # python transition.py < tiny.txt
